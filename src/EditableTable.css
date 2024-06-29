@@ -1,0 +1,92 @@
+/* src/EditableTable.css */
+.editable-table {
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .editable-table td {
+    border: 4px solid #000;
+    padding: 0; /* Remove padding for square cells */
+    background-image: url('kurt_empty.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* For the input positioning */
+    width: 200px; /* Fixed width for square cells */
+    height: 200px; /* Fixed height for square cells */
+    max-width: 200px; /* Fixed width for square cells */
+    max-height: 200px; /* Fixed height for square cells */
+    min-width:200px;
+    min-height:100px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .editable-table td.middle-cell {
+    color: #fff0;
+    background-image: url('kurt.png'); /* Replace with your image URL */
+  }
+
+  .editable-table input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0; /* Remove padding for square input */
+    box-sizing: border-box;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: absolute; /* Positioning over the background */
+    top: 0;
+    left: 0;
+  }
+  
+  .regenerate-button, .add-value-button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .regenerate-button {
+    background-color: black;
+    color: white;
+    border-radius: 0.5em;
+    border: 2px solid black;
+  }
+  
+  .regenerate-button:hover{
+    background-color: white;
+    color:black;
+  }
+
+  .editable-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .editable-list-item {
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .editable-list input {
+    flex-grow: 1;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .remove-button {
+    margin-left: 10px;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .red-circle {
+    width: 50%;
+    height: 50%;
+    background-color: #ff000096;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
