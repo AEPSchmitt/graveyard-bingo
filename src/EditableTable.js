@@ -160,6 +160,7 @@ const EditableTable = () => {
         <label for="import" class="btn">↥ Import</label>
         <input id="import" type="file" onChange={handleImportList} className="import-input"/>
       </div>
+      <p>So it goes.</p>
 
       <a href="https://www.patreon.com/regulationpod/" className="regulation">
       <img src="butthole.webp" alt="Kurts Butthole" className="butthole" />
