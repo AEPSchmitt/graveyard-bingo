@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import './EditableTable.css';
 
-const initialDefaultStrings = ["Basket Weaver","Teacher","Cobbler","Mayor","Doctor","Lawyer","Engineer","Writer","Police Officer","Pastor","Architect","Actor/Actress", "Entrepreneur","Born in '98","Died in '98","Born 1910's", "Born 1920's", "Born 1930's", "Born 1940's", "Born 1950's", "Born 1960's","Born 1970's","Born 1980's",
-                                "Died 1960's","Died 1970's","Died 1980's","Died 1990's","Died 2000's","Died 2010's","Died 2020's",">100 years", "✝ Headstone", "Stone dove", "Stone heart"
+const initialDefaultStrings = ["Basket Weaver","Teacher","Cobbler","Carpenter","Nurse","Mayor","Doctor","Lawyer","Engineer","Smith","Writer","Police Officer","Pastor","Architect","Actor/Actress", "Entrepreneur","Born in '98","Died in '98","Born 1910's", "Born 1920's", "Born 1930's", "Born 1940's", "Born 1950's", "Born 1960's","Born 1970's","Born 1980's",
+                                "✝ 1960's","✝ 1970's","✝ 1980's","✝ 1990's","✝ 2000's","✝ 2010's","✝ 2020's",">100 years", "✝ Headstone", "Stone dove", "Stone heart"
 ];
 
 const getRandomString = (strings) => strings[Math.floor(Math.random() * strings.length)];
