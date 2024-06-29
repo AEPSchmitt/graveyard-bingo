@@ -75,7 +75,7 @@ const EditableTable = () => {
         </tbody>
       </table>
       <p className="kurt">art by Kurt Vonnegut</p>
-      <button onClick={() => setDefaultStrings([...initialDefaultStrings])} className="regenerate-button">Regenerate</button>
+      <button onClick={() => setDefaultStrings([...defaultStrings])} className="regenerate-button">Regenerate</button>
       <h2>Options</h2>
       <ul className="editable-list">
         {defaultStrings.map((item, index) => (
