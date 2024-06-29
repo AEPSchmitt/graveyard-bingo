@@ -79,7 +79,7 @@ const EditableTable = () => {
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(defaultStrings));
     const downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href", dataStr);
-    downloadAnchorNode.setAttribute("download", "editableList.json");
+    downloadAnchorNode.setAttribute("download", "graveyard.json");
     document.body.appendChild(downloadAnchorNode); // required for Firefox
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
