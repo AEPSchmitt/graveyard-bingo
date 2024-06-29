@@ -95,8 +95,9 @@ const EditableTable = () => {
         ))}
       </ul>
       <button onClick={handleAddValue} className="add-value-button">Add More</button>
+      <a href="https://www.patreon.com/regulationpod/" className="regulation">
       <img src="butthole.webp" alt="Kurts Butthole" className="butthole" />
-      <p className="centertext">for<br/><a href="https://www.patreon.com/regulationpod/" className="regulation"><b>The Regulation Podcast</b></a></p>
+      <p className="centertext">for<br/><b>The Regulation Podcast</b></p></a>
       <p className="rightext">website by <a href="https://ko-fi.com/aepschmitt" className="aepslink"><b>AEPSchmitt</b></a></p>
     </div>
   );

@@ -90,3 +90,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .regulation:hover{
+    text-decoration: underline;
+  }
