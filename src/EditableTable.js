@@ -156,7 +156,7 @@ const EditableTable = () => {
     </div>
     <div className="share">
         <button onClick={handleExportList} className="export-button">Export ↧</button>
-        <label for="import" class="btn">Import ↥</label>
+        <label for="import" class="btn">↥ Import</label>
         <input id="import" type="file" onChange={handleImportList} className="import-input"/>
       </div>
 
