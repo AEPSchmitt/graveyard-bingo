@@ -91,7 +91,7 @@ const EditableTable = () => {
               type="text" 
               value={item} 
             />
-            <button onClick={() => handleRemoveValue(index)} className="remove-button">Remove</button>
+            <button onClick={() => handleRemoveValue(index)} className="remove-button">🗑️</button>
           </li>
         ))}
       </ul>
