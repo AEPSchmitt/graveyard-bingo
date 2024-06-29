@@ -93,3 +93,17 @@
   .regulation:hover{
     text-decoration: underline;
   }
+  .import-input{
+    display: none;
+    visibility:hidden;
+    width: 0;
+  }
+  .btn {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: #e9e9ed;
+    border: 1px solid gray;
+    border-radius: 3px;
+  }

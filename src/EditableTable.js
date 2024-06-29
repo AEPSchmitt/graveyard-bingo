@@ -153,8 +153,11 @@ const EditableTable = () => {
       <button onClick={handleAddValue} className="add-value-button">Add More</button>
       <div className="share">
         <button onClick={handleShareList} className="share-button">Share</button>
-        <button onClick={handleExportList} className="export-button">Export List</button>
-        <input type="file" onChange={handleImportList} className="import-input"/>
+    </div>
+    <div className="share">
+        <button onClick={handleExportList} className="export-button">Export ↧</button>
+        <label for="import" class="btn">Import ↥</label>
+        <input id="import" type="file" onChange={handleImportList} className="import-input"/>
       </div>
 
       <a href="https://www.patreon.com/regulationpod/" className="regulation">
