@@ -80,10 +80,10 @@
     cursor: pointer;
   }
   
-  .red-circle {
+  .dotted {
     width: 50%;
     height: 50%;
-    background-color: #ff000096;
+    background-color: #608dd3bd;
     border-radius: 50%;
     position: absolute;
     top: 50%;

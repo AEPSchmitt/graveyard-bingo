@@ -32,6 +32,19 @@ const EditableTable = () => {
     setClickedCells([]);
   }, [defaultStrings]);
 
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const listParam = urlParams.get('list');
+    if (listParam) {
+      try {
+        const importedList = JSON.parse(listParam);
+        setDefaultStrings(importedList);
+      } catch (error) {
+        console.error('Invalid JSON in URL');
+      }
+    }
+  }, []);
+
   // Handle cell click to toggle red circle
   const handleCellClick = (row, col) => {
     // Toggle clicked cell
@@ -62,6 +75,48 @@ const EditableTable = () => {
     setDefaultStrings([...defaultStrings, ""]);
   };
 
+  const handleExportList = () => {
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(defaultStrings));
+    const downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href", dataStr);
+    downloadAnchorNode.setAttribute("download", "editableList.json");
+    document.body.appendChild(downloadAnchorNode); // required for Firefox
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
+  };
+
+  const handleImportList = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const content = e.target.result;
+        try {
+          const importedList = JSON.parse(content);
+          setDefaultStrings(importedList);
+        } catch (error) {
+          console.error("Invalid JSON file");
+        }
+      };
+      reader.readAsText(file);
+    }
+  };
+
+  const generateShareableURL = () => {
+    const url = new URL(window.location);
+    url.searchParams.set('list', JSON.stringify(defaultStrings));
+    return url.toString();
+  };
+
+  const handleShareList = () => {
+    const shareableURL = generateShareableURL();
+    navigator.clipboard.writeText(shareableURL).then(() => {
+      alert('Shareable URL copied to clipboard!');
+    }).catch((err) => {
+      console.error('Failed to copy: ', err);
+    });
+  };
+
   return (
     <div>
       <table className="editable-table">
@@ -72,7 +127,7 @@ const EditableTable = () => {
                 <td key={colIndex} onClick={() => handleCellClick(rowIndex, colIndex)} className={`table-cell ${rowIndex === 2 && colIndex === 2 ? 'middle-cell' : ''}`}>
                   {cell}
                   {clickedCells.some(cell => cell.row === rowIndex && cell.col === colIndex) && (
-                    <div className="red-circle"></div>
+                    <div className="dotted"></div>
                   )}
                 </td>
               ))}
@@ -88,16 +143,23 @@ const EditableTable = () => {
           <li key={index} className="editable-list-item">
             <input 
               type="text" 
-              value={item} 
+              value={item}
+              onChange={(e) => handleListChange(index, e.target.value)}
             />
             <button onClick={() => handleRemoveValue(index)} className="remove-button">🗑️</button>
           </li>
         ))}
       </ul>
       <button onClick={handleAddValue} className="add-value-button">Add More</button>
+      <div className="share">
+        <button onClick={handleShareList} className="share-button">Share</button>
+        <button onClick={handleExportList} className="export-button">Export List</button>
+        <input type="file" onChange={handleImportList} className="import-input"/>
+      </div>
+
       <a href="https://www.patreon.com/regulationpod/" className="regulation">
       <img src="butthole.webp" alt="Kurts Butthole" className="butthole" />
-      <p className="centertext">for<br/><b>The Regulation Podcast</b></p></a>
+      <p className="centertext"><b>The Regulation Podcast</b></p></a>
       <p className="rightext">website by <a href="https://ko-fi.com/aepschmitt" className="aepslink"><b>AEPSchmitt</b></a></p>
     </div>
   );
