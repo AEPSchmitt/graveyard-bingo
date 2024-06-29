@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './EditableTable.css';
 
 const initialDefaultStrings = ["Basket Weaver","Teacher","Cobbler","Mayor","Doctor","Lawyer","Engineer","Writer","Police Officer","Pastor","Architect","Actor/Actress", "Entrepreneur","Born in '98","Died in '98","Born 1910's", "Born 1920's", "Born 1930's", "Born 1940's", "Born 1950's", "Born 1960's","Born 1970's","Born 1980's",
-                                "Died 1960's","Died 1970's","Died 1980's","Died 1990's","Died 2000's","Died 2010's","Died 2020's",">100 years",
+                                "Died 1960's","Died 1970's","Died 1980's","Died 1990's","Died 2000's","Died 2010's","Died 2020's",">100 years", "✝ Headstone", "Stone dove", "Stone heart"
 ];
 
 const getRandomString = (strings) => strings[Math.floor(Math.random() * strings.length)];
@@ -137,6 +137,7 @@ const EditableTable = () => {
       </table>
       <p className="rightext">art by <a href="https://en.wikipedia.org/wiki/Kurt_Vonnegut" className="kurtlink"><b>Kurt Vonnegut</b></a></p>
       <button onClick={() => setDefaultStrings([...defaultStrings])} className="regenerate-button">Regenerate</button>
+      <p><i>Please Play Respectfully</i></p>
       <h2>Options</h2>
       <ul className="editable-list">
         {defaultStrings.map((item, index) => (
