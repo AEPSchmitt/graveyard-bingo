@@ -162,8 +162,10 @@ const EditableTable = () => {
       </div>
       <p>So it goes.</p>
 
-      <a href="https://www.patreon.com/regulationpod/" className="regulation">
+      
       <img src="butthole.webp" alt="Kurts Butthole" className="butthole" />
+      <p>made for</p>
+      <a href="https://www.patreon.com/regulationpod/" className="regulation">
       <p className="centertext"><b>The Regulation Podcast</b></p></a>
       <p className="rightext">website by <a href="https://ko-fi.com/aepschmitt" className="aepslink"><b>AEPSchmitt</b></a></p>
     </div>
