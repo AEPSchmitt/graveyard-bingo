@@ -135,7 +135,7 @@ const EditableTable = () => {
           ))}
         </tbody>
       </table>
-      <p className="rightext">art by <a href="https://da.wikipedia.org/wiki/Kurt_Vonnegut" className="kurtlink"><b>Kurt Vonnegut</b></a></p>
+      <p className="rightext">art by <a href="https://en.wikipedia.org/wiki/Kurt_Vonnegut" className="kurtlink"><b>Kurt Vonnegut</b></a></p>
       <button onClick={() => setDefaultStrings([...defaultStrings])} className="regenerate-button">Regenerate</button>
       <h2>Options</h2>
       <ul className="editable-list">
