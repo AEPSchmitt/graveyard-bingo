@@ -14,7 +14,6 @@ const generateInitialData = (defaultStrings) => {
     Array.from({ length: 5 }, () => {
         let draw_index = Math.floor(Math.random() * options.length)
         let draw = options[draw_index];
-        console.log(draw)
         options.splice(draw_index, 1)
         return draw
     })
@@ -95,7 +94,9 @@ const EditableTable = () => {
           </li>
         ))}
       </ul>
-      <button onClick={handleAddValue} className="add-value-button">Add New</button>
+      <button onClick={handleAddValue} className="add-value-button">Add More</button>
+      <img src="butthole.webp" alt="Kurts Butthole" className="butthole" />
+      <p className="centertext">for<br/><a href="https://www.patreon.com/regulationpod/" className="regulation"><b>The Regulation Podcast</b></a></p>
       <p className="rightext">website by <a href="https://ko-fi.com/aepschmitt" className="aepslink"><b>AEPSchmitt</b></a></p>
     </div>
   );

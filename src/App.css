@@ -69,6 +69,18 @@ input {
   text-decoration: none;
   color:rgb(161, 33, 33);
 }
+.regulation {
+  text-decoration: none;
+  color:rgb(0, 0, 0);
+}
 .aepslink:hover{
   text-decoration: underline;
+}
+.butthole {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  max-width: 40%;
 }
