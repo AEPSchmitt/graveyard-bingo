@@ -55,8 +55,8 @@ table {
 input {
   max-width:400px;
 }
-.kurt {
-  width: 1000px;
+.rightext {
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
   text-align: right;
@@ -64,4 +64,11 @@ input {
 .kurtlink {
   text-decoration: none;
   color:black;
+}
+.aepslink{
+  text-decoration: none;
+  color:rgb(161, 33, 33);
+}
+.aepslink:hover{
+  text-decoration: underline;
 }

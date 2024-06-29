@@ -12,11 +12,11 @@
     background-size: cover;
     background-position: center;
     position: relative; /* For the input positioning */
-    width: 200px; /* Fixed width for square cells */
-    height: 200px; /* Fixed height for square cells */
-    max-width: 200px; /* Fixed width for square cells */
-    max-height: 200px; /* Fixed height for square cells */
-    min-width:200px;
+    width: 180px; /* Fixed width for square cells */
+    height: 180px; /* Fixed height for square cells */
+    max-width: 180px; /* Fixed width for square cells */
+    max-height: 180px; /* Fixed height for square cells */
+    min-width:180px;
     min-height:100px;
     text-align: center;
     overflow: hidden;

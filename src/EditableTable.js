@@ -81,7 +81,7 @@ const EditableTable = () => {
           ))}
         </tbody>
       </table>
-      <p className="kurt">art by <a href="https://da.wikipedia.org/wiki/Kurt_Vonnegut" className="kurtlink"><b>Kurt Vonnegut</b></a></p>
+      <p className="rightext">art by <a href="https://da.wikipedia.org/wiki/Kurt_Vonnegut" className="kurtlink"><b>Kurt Vonnegut</b></a></p>
       <button onClick={() => setDefaultStrings([...defaultStrings])} className="regenerate-button">Regenerate</button>
       <h2>Options</h2>
       <ul className="editable-list">
@@ -96,6 +96,7 @@ const EditableTable = () => {
         ))}
       </ul>
       <button onClick={handleAddValue} className="add-value-button">Add New</button>
+      <p className="rightext">website by <a href="https://ko-fi.com/aepschmitt" className="aepslink"><b>AEPSchmitt</b></a></p>
     </div>
   );
 };
