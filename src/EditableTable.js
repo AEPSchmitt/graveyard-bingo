@@ -74,6 +74,7 @@ const EditableTable = () => {
           ))}
         </tbody>
       </table>
+      <p className="kurt">art by Kurt Vonnegut</p>
       <button onClick={() => setDefaultStrings([...initialDefaultStrings])} className="regenerate-button">Regenerate</button>
       <h2>Options</h2>
       <ul className="editable-list">
@@ -88,7 +89,7 @@ const EditableTable = () => {
           </li>
         ))}
       </ul>
-      <button onClick={handleAddValue} className="add-value-button">Add Value</button>
+      <button onClick={handleAddValue} className="add-value-button">Add New</button>
     </div>
   );
 };

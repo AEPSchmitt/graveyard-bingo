@@ -55,3 +55,9 @@ table {
 input {
   max-width:400px;
 }
+.kurt {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
