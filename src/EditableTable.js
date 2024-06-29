@@ -2,15 +2,22 @@
 import React, { useState, useEffect } from 'react';
 import './EditableTable.css';
 
-const initialDefaultStrings = ["Basket Weaver","Teacher","Cobbler","Mayor","Born 1910's", "Born 1920's", "Born 1930's", "Born 1940's", "Born 1950's", "Born 1960's","Born 1907's","Born 1980's",
-                                "Died 1960's","Died 1970's","Died 1980's","Died 1990's","Died 2000's","Died 2010's","Died 2020's",">100 year lifespan",
+const initialDefaultStrings = ["Basket Weaver","Teacher","Cobbler","Mayor","Doctor","Lawyer","Engineer","Writer","Police Officer","Pastor","Architect","Actor/Actress", "Entrepreneur","Born in '98","Died in '98","Born 1910's", "Born 1920's", "Born 1930's", "Born 1940's", "Born 1950's", "Born 1960's","Born 1970's","Born 1980's",
+                                "Died 1960's","Died 1970's","Died 1980's","Died 1990's","Died 2000's","Died 2010's","Died 2020's",">100 years",
 ];
 
 const getRandomString = (strings) => strings[Math.floor(Math.random() * strings.length)];
 
 const generateInitialData = (defaultStrings) => {
+    let options = [...defaultStrings];
   return Array.from({ length: 5 }, () => 
-    Array.from({ length: 5 }, () => getRandomString(defaultStrings))
+    Array.from({ length: 5 }, () => {
+        let draw_index = Math.floor(Math.random() * options.length)
+        let draw = options[draw_index];
+        console.log(draw)
+        options.splice(draw_index, 1)
+        return draw
+    })
   );
 };
 
@@ -74,7 +81,7 @@ const EditableTable = () => {
           ))}
         </tbody>
       </table>
-      <p className="kurt">art by Kurt Vonnegut</p>
+      <p className="kurt">art by <a href="https://da.wikipedia.org/wiki/Kurt_Vonnegut" className="kurtlink"><b>Kurt Vonnegut</b></a></p>
       <button onClick={() => setDefaultStrings([...defaultStrings])} className="regenerate-button">Regenerate</button>
       <h2>Options</h2>
       <ul className="editable-list">
@@ -83,7 +90,6 @@ const EditableTable = () => {
             <input 
               type="text" 
               value={item} 
-              onChange={(e) => handleListChange(index, e.target.value)} 
             />
             <button onClick={() => handleRemoveValue(index)} className="remove-button">Remove</button>
           </li>

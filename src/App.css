@@ -61,3 +61,7 @@ input {
   margin-right: auto;
   text-align: right;
 }
+.kurtlink {
+  text-decoration: none;
+  color:black;
+}
