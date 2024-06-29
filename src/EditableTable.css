@@ -20,6 +20,7 @@
     min-height:100px;
     text-align: center;
     overflow: hidden;
+    font-size: 0.9em;
   }
   .editable-table td.middle-cell {
     color: #fff0;
