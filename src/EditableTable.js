@@ -27,6 +27,7 @@ const generateInitialData = (defaultStrings) => {
 
 function toggleDarkmode(){
   document.body.classList.toggle('dark');
+  document.getElementById('darkmode-guide').style.display = 'none';
 }
 
 const EditableTable = () => {
@@ -173,7 +174,7 @@ const EditableTable = () => {
 
       
       <img onClick={toggleDarkmode} src="butthole.webp" alt="Kurts Butthole" className="butthole" />
-      <p className="centertext flashing"><i>( click butthole for darkmode )</i></p>
+      <p id="darkmode-guide" className="centertext flashing"><i>( click butthole for darkmode )</i></p>
       <p>made for</p>
       <a href="https://www.patreon.com/regulationpod/" className="regulation">
       <p className="centertext"><b>The Regulation Podcast</b></p></a>
