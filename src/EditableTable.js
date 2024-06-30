@@ -1,6 +1,11 @@
 // src/EditableTable.js
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 import './EditableTable.css';
+
+library.add(fas)
 
 const initialDefaultStrings = ["Basket Weaver","Teacher","Cobbler","Carpenter","Nurse","Mayor","Doctor","Lawyer","Engineer","Smith","Writer","Police Officer","Pastor","Architect","Actor/Actress", "Entrepreneur","Born in '98","Died in '98","Born 1910's", "Born 1920's", "Born 1930's", "Born 1940's", "Born 1950's", "Born 1960's","Born 1970's","Born 1980's",
                                 "✝ 1960's","✝ 1970's","✝ 1980's","✝ 1990's","✝ 2000's","✝ 2010's","✝ 2020's",">100 years", "✝ Headstone", "Stone dove", "Stone heart"
@@ -136,7 +141,7 @@ const EditableTable = () => {
         </tbody>
       </table>
       <p className="rightext">art by <a href="https://en.wikipedia.org/wiki/Kurt_Vonnegut" className="kurtlink"><b>Kurt Vonnegut</b></a></p>
-      <button onClick={() => setDefaultStrings([...defaultStrings])} className="regenerate-button">Regenerate</button>
+      <button onClick={() => setDefaultStrings([...defaultStrings])} className="regenerate-button"><FontAwesomeIcon icon="fa-solid fa-rotate-right" /></button>
       <p><i>Please Play Respectfully</i></p>
       <h2>Options</h2>
       <ul className="editable-list">
@@ -147,13 +152,13 @@ const EditableTable = () => {
               value={item}
               onChange={(e) => handleListChange(index, e.target.value)}
             />
-            <button onClick={() => handleRemoveValue(index)} className="remove-button">🗑️</button>
+            <button onClick={() => handleRemoveValue(index)} className="remove-button"><FontAwesomeIcon icon="fa-solid fa-trash" /></button>
           </li>
         ))}
       </ul>
-      <button onClick={handleAddValue} className="add-value-button">Add More</button>
+      <button onClick={handleAddValue} className="add-value-button"><FontAwesomeIcon icon="fa-solid fa-plus" /> Add</button>
       <div className="share">
-        <button onClick={handleShareList} className="share-button">Share</button>
+        <button onClick={handleShareList} className="share-button"><FontAwesomeIcon icon="fa-solid fa-share-nodes" /> Share</button>
     </div>
     <div className="share">
         <button onClick={handleExportList} className="export-button">Export ↧</button>
