@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <h1>Graveyard Bingo</h1>
       <EditableTable />
+      <Analytics />
     </div>
   );
 }
