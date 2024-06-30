@@ -1,4 +1,18 @@
 /* src/EditableTable.css */
+
+@keyframes flashing {
+  0%   {opacity:0; }
+  25%  {opacity:0;}
+  50%  {opacity:0;}
+  55%  {opacity:0;}
+  75%  {opacity:1;}
+  80%  {opacity:1;}
+  100% {opacity:0;}
+}
+
+.flashing {
+  animation: flashing 20s ease-in-out infinite;
+}
 .editable-table {
     max-width: 100%;
     border-collapse: collapse;
@@ -118,4 +132,17 @@
     background-color: #e9e9ed;
     border: 1px solid gray;
     border-radius: 3px;
+  }
+  .dark {
+    background-color: black;
+    filter: invert(1);
+  }
+  
+  .darkmode-btn{
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      left: 10px;
+      bottom: 10px;
+      font-size: 75px;
   }

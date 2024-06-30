@@ -68,6 +68,10 @@ input {
   text-decoration: none;
   color:black;
 }
+.kurtlink:hover {
+  text-decoration: underline;
+  color:#f6c600;
+}
 .aepslink{
   text-decoration: none;
   color:rgb(161, 33, 33);
@@ -86,6 +90,10 @@ input {
   margin-right: auto;
   width: 200px;
   max-width: 40%;
+}
+.butthole:hover{
+  transform: scale(1.05);
+  cursor:pointer;
 }
 .share {
   width: fit-content;
