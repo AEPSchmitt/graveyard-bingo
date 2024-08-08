@@ -37,6 +37,12 @@
     font-size: 0.9em;
     cursor: pointer;
   }
+  td p {
+    max-width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .editable-table td:hover {
     background-size: 110% 110%;
   }
