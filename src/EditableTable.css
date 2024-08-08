@@ -35,6 +35,10 @@
     text-align: center;
     overflow: hidden;
     font-size: 0.9em;
+    cursor: pointer;
+  }
+  .editable-table td:hover {
+    background-size: 110% 110%;
   }
   .editable-table td.middle-cell {
     color: #fff0;
@@ -109,12 +113,13 @@
   .dotted {
     width: 50%;
     height: 50%;
-    background-color: #3b78d7bd;
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-image: url('butthole.png');
+    background-size: contain;
   }
   .regulation:hover{
     text-decoration: underline;
