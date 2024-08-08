@@ -50,6 +50,9 @@
     color: #fff0;
     background-image: url('kurt.png'); /* Replace with your image URL */
   }
+  .middle-cell:hover{
+      background-size: 100% 100% !important;
+  }
 
   .editable-table input {
     width: 100%;
